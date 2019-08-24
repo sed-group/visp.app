@@ -1,142 +1,60 @@
 <template>
   <v-container>
-    <v-layout
-      text-center
-      wrap
-    >
-      <v-flex xs12>
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        ></v-img>
-      </v-flex>
+    <v-col>
+      <h3>Drag and drop to order</h3>
 
-      <v-flex mb-4>
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
-        </h1>
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
-        </p>
-      </v-flex>
-
-      <v-flex
-        mb-5
-        xs12
-      >
-        <h2 class="headline font-weight-bold mb-3">What's next?</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Important Links</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-
-      <v-flex
-        xs12
-        mb-5
-      >
-        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
-        <v-layout justify-center>
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-layout>
-      </v-flex>
-    </v-layout>
+      <v-simple-table>
+        <thead>
+          <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Description</th>
+            <th class="text-left">Position</th>
+          </tr>
+        </thead>
+        <draggable v-model="list" tag="tbody" @end="onEnd">
+          <tr v-for="item in list" :key="item.name">
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ list.indexOf(item) }}</td>
+          </tr>
+        </draggable>
+      </v-simple-table>
+    </v-col>
   </v-container>
 </template>
 
 <script>
+import draggable from "vuedraggable";
 export default {
-  data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
-      },
-      {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer',
-      },
-      {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/layout/pre-defined',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
-    ],
-  }),
+  name: "table-example",
+  display: "Table",
+  order: 8,
+  components: {
+    draggable
+  },
+  data() {
+    return {
+      list: [
+        { id: 1, name: "Cost", description: "How much does it cost to produce the item." },
+        { id: 2, name: "Performance", description: "How well does it perform its main function." },
+        { id: 3, name: "Reliability", description: "How reliable it is." },
+        { id: 4, name: "Maintainability", description: "How easy to maintain it is." }
+      ],
+      dragging: false
+    };
+  },
+  methods: {
+    onEnd: function (event) {
+      // now we have access to the native event
+      console.log(event)
+      console.log(event.item.cells["0"].innerText)
+      console.log(this.list)
+    }
+  },
 };
 </script>
+<style scoped>
+.buttons {
+  margin-top: 35px;
+}
+</style>

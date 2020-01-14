@@ -11,7 +11,7 @@ Volvo Car Group and Volvo AB represent the OEM’s providing access to cases use
 
 A public and web-based version of the tool based on the VISP methodology is dveloped, that will be used in seminars with other automotive companies and for student projects. Scientifically, results will be published in high quality peer reviewed scientific fora.
 
-More info: https://research.chalmers.se/en/project/8430
+More info: Chalmers Research ([SE](https://research.chalmers.se/project/?id=8430), [EN](https://research.chalmers.se/en/project/8430), Kunskapsförmedlingen [SE](https://kunskapsformedlingen.se/projekt/visp-varde-och-flexibilitetsinverkansanalys-for-hallbar-produktion/), [EN](https://kunskapsformedlingen.se/en/projects/visp-value-and-flexibility-impact-analysis-for-sustainable-production/), VINNOVA ([SE](https://www.vinnova.se/p/visp---varde-och-flexibilitetsinverkansanalys-for-hallbar-produktion/), [EN](https://www.vinnova.se/en/p/visp---value-and-flexibility-impact-analysis-for-sustainable-production/))
 
 ## Web app setup
 Clone this repository in your machine and follow the instructions below to try the VISP web tool in its current (pre-alpha) development status.

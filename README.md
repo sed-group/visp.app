@@ -14,6 +14,9 @@ A public and web-based version of the tool based on the VISP methodology is dvel
 More info: https://research.chalmers.se/en/project/8430
 
 ## Web app setup
+Clone this repository in your machine and follow the instructions below to try the VISP web tool in its current (pre-alpha) development status.
+
+### Install dependencies
 ```
 npm install
 ```

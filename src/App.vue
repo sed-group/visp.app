@@ -8,6 +8,12 @@
       <v-spacer></v-spacer>
       <v-btn
         text
+        href="/about"
+      >
+        <span class="mr-2">About</span>
+      </v-btn>
+      <v-btn
+        text
         href="https://github.com/sed-group/visp.app"
         target="_blank"
       >
@@ -16,18 +22,18 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <Reorder/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Reorder from './components/Reorder';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Reorder,
   },
   data: () => ({
     //

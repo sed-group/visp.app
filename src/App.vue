@@ -40,7 +40,7 @@
     <v-content>
       <v-tabs-items v-model="tab">
         <v-tab-item key="Current">
-          Test
+          <Current/>
         </v-tab-item>
         <v-tab-item key="Process">
           <Process/>
@@ -55,12 +55,14 @@
 </template>
 
 <script>
+import Current from './components/Current';
 import Process from './components/Process';
 import Reorder from './components/Reorder';
 
 export default {
   name: 'App',
   components: {
+    Current,
     Process,
     Reorder,
   },

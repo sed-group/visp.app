@@ -52,10 +52,23 @@
             <v-card-title>Functional structure</v-card-title>
             <v-card-subtitle>Enhanced Funtion-Means method</v-card-subtitle>
             <v-card-text>
-              <v-skeleton-loader
-                class="mx-auto"
-                type="image"
-              ></v-skeleton-loader>
+              (Hierarchy construction interface)
+              <v-treeview
+                v-model="tree"
+                :open="open"
+                :items="items"
+                activatable
+                item-key="name"
+              >
+                <template v-slot:prepend="{ item, open }">
+                  <v-icon v-if="!item.type">
+                    {{ open ? 'mdi-folder-open' : 'mdi-folder' }}
+                  </v-icon>
+                  <v-icon v-else>
+                    {{ types[item.type] }}
+                  </v-icon>
+                </template>
+              </v-treeview>
               Generate alternative solutions
               <br/>
               Select preferred solutions
@@ -64,7 +77,13 @@
           <v-card class="mb-3">
             <v-card-title>Model</v-card-title>
             <v-card-subtitle>Parameters</v-card-subtitle>
-            <v-card-text>This is a system of partial abstractions used as a cognitive tool for a certain purpose.</v-card-text>
+            <v-card-text>
+              This is a system of partial abstractions used as a cognitive tool for a certain purpose.
+              <v-skeleton-loader
+                class="mx-auto"
+                type="image"
+              ></v-skeleton-loader>
+            </v-card-text>
           </v-card>
         </v-col>
         <v-col cols="4">
@@ -72,6 +91,7 @@
             <v-card-title>Visualization</v-card-title>
             <v-card-subtitle>Value impact</v-card-subtitle>
             <v-card-text>
+              <VueApexCharts width="380" type="radar" :options="options" :series="series" :labels="labels"></VueApexCharts>
               <v-sparkline
                 :value="value"
                 :gradient="gradient"
@@ -106,6 +126,7 @@
                 value="70"
                 striped
               ></v-progress-linear>
+              Alternative ranking?
             </v-card-text>
           </v-card>
         </v-col>
@@ -115,6 +136,8 @@
 </template>
 
 <script>
+import VueApexCharts from 'vue-apexcharts'
+
 const gradients = [
   ['#222'],
   ['#42b3f4'],
@@ -126,8 +149,8 @@ const gradients = [
 export default {
   name: "current",
   display: "Current",
-  order: 8,
   components: {
+    VueApexCharts,
   },
   data: () => ({
     width: 2,
@@ -141,6 +164,40 @@ export default {
     fill: false,
     type: 'trend',
     autoLineWidth: false,
+    options: {},
+    series: [
+      {
+        name: "Radar Series 1",
+        data: [45, 52, 38, 24, 33, 10]
+      },
+      {
+        name: "Radar Series 2",
+        data: [26, 21, 20, 6, 8, 15]
+      }
+    ],
+    labels: ['April', 'May', 'June', 'July', 'August', 'September'],    
+    open: [],
+    types: {
+      fr: 'mdi-function',
+      ds: 'mdi-cogs',
+    },
+    tree: [],
+    items: [
+      {
+        name: 'Move cursor on the screen',
+        type: 'fr',
+        children: [
+          {
+            name: 'Mouse',
+            type: 'ds',
+            children: [{
+              name: 'Connect to computer',
+              type: 'fr',
+            }],
+          },
+        ],
+      },
+    ],
   }),
   methods: {
   },

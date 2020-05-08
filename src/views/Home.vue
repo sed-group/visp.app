@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld />
+  <Reorder />
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+import Reorder from '../components/Reorder';
 
 export default {
   components: {
-    HelloWorld,
+    Reorder,
   },
 };
 </script>

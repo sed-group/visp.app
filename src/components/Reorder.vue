@@ -1,8 +1,6 @@
 <template>
   <v-container>
     <v-col>
-      <h3>Drag and drop to order</h3>
-
       <v-simple-table>
         <thead>
           <tr>

@@ -272,10 +272,24 @@ export default {
   data: () => ({
     e1: 1,
     valueCreationStrategies: [
-      { id: 1, name: "Big GTO", description: "15 years, 1 shot" },
-      { id: 2, name: "Several GTO", description: "5 satellites/year" },
-      { id: 3, name: "Small GEO", description: "20 satellites/year" },
-      { id: 4, name: "TBD", description: "" },
+      { id: 1, name: "No HUD", description: "Functionality not present" },
+      {
+        id: 2,
+        name: "Current HUD",
+        description: "The solution currently used"
+      },
+      {
+        id: 3,
+        name: "Increased functionality, same tech",
+        description:
+          "Additional functions or performance, but still using the same technology"
+      },
+      {
+        id: 4,
+        name: "Increased functionality, new tech",
+        description:
+          "Additional functions or performance, by using some new technology"
+      },
       { id: 5, name: "TBD", description: "" }
     ],
     selectedVCS: { id: 1, name: "", description: "" },
@@ -479,25 +493,139 @@ export default {
     initialize() {
       this.needs = [
         {
-          type: "external",
-          stakeholder: "Someone",
-          needName: "Launch Mass Reduction",
-          description: "The vehicle needs to be light.",
-          consequences: "Otherwise more fuel will be needed.",
-          examples: "The rocket equation explains it.",
-          engineeringAspects: "Mass (kg), Specific trust (N), Drag reduction",
-          processName: "Operation Process"
+          type: "internal",
+          stakeholder: "",
+          needName: "No intrusion",
+          description: "Do not intrude into the passenger space",
+          consequences: "Injuries",
+          examples: "",
+          engineeringAspects:
+            "Safety, Unit deformability, Unit position, Unit dimensions",
+          processName: ""
         },
         {
           type: "internal",
-          stakeholder: "Someone else",
-          needName: "Increased manufacturability",
-          description: "The manufacturing process needs to be very lean.",
-          consequences: "Profitability decrease.",
-          examples: "Higher costs.",
-          engineeringAspects: "Volume (m^3), Part complexity",
-          processName: "Operation Process"
+          stakeholder: "",
+          needName: "Display information",
+          description: "Provide information to driver",
+          consequences: "Less info displayed",
+          examples: "",
+          engineeringAspects: "Image size, Image position, Image sharpness",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Image quality",
+          description: "No image quality issues",
+          consequences: "Lower customer satisfaction",
+          examples: "",
+          engineeringAspects: "Image sharpness",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Virtual image position",
+          description: "Further position of virtual image",
+          consequences: "Eye strain",
+          examples: "",
+          engineeringAspects: "Image position",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Height adjustability",
+          description: "Easy for drivers to adjust to their height",
+          consequences: "Lower customer satisfaction",
+          examples: "",
+          engineeringAspects: "Ergonomics, Eyebox position",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Minimize noise",
+          description: "Minimize squeaking and rattling",
+          consequences: "Lower customer satisfaction",
+          examples: "",
+          engineeringAspects: "Attachment position, Attachment dampening",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Fit in space",
+          description:
+            "Fit in the space between steering column, cross car beam and instrument panel",
+          consequences: "High development cost",
+          examples: "",
+          engineeringAspects:
+            "Unit position, Unit dimensions, Attachment position",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Replaceability",
+          description: "Easy to replace",
+          consequences: "High maintenance cost",
+          examples: "",
+          engineeringAspects:
+            "Unit position, Unit dimensions, Attachment position",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Windshield shape",
+          description: "Maintain windshield shape within brand design language",
+          consequences: "Brand degradation",
+          examples: "",
+          engineeringAspects: "Optical path, Windshield geometry",
+          processName: ""
+        },
+        {
+          type: "internal",
+          stakeholder: "",
+          needName: "Minimize energy waste",
+          description: "Minimize energy waste",
+          consequences: "Higher comsumption",
+          examples: "",
+          engineeringAspects: "Power consumption",
+          processName: ""
+        },
+        {
+          type: "external",
+          stakeholder: "",
+          needName: "Perceived quality",
+          description: "High customer value, luxury brand image",
+          consequences: "Reduced sales",
+          examples: "",
+          engineeringAspects: "Quality",
+          processName: ""
         }
+        // {
+        //   type: "external",
+        //   stakeholder: "Someone",
+        //   needName: "Launch Mass Reduction",
+        //   description: "The vehicle needs to be light.",
+        //   consequences: "Otherwise more fuel will be needed.",
+        //   examples: "The rocket equation explains it.",
+        //   engineeringAspects: "Mass (kg), Specific trust (N), Drag reduction",
+        //   processName: "Operation Process"
+        // },
+        // {
+        //   type: "internal",
+        //   stakeholder: "Someone else",
+        //   needName: "Increased manufacturability",
+        //   description: "The manufacturing process needs to be very lean.",
+        //   consequences: "Profitability decrease.",
+        //   examples: "Higher costs.",
+        //   engineeringAspects: "Volume (m^3), Part complexity",
+        //   processName: "Operation Process"
+        // }
       ];
     },
 

@@ -27,6 +27,9 @@
           <v-tab key="Current">
             Current
           </v-tab>
+          <v-tab key="EFM">
+            EFM
+          </v-tab>
           <v-tab key="Process">
             Process
           </v-tab>
@@ -42,6 +45,9 @@
         <v-tab-item key="Current">
           <Current/>
         </v-tab-item>
+        <v-tab-item key="EFM">
+          <EFM/>
+        </v-tab-item>
         <v-tab-item key="Process">
           <Process/>
         </v-tab-item>
@@ -56,6 +62,7 @@
 
 <script>
 import Current from './components/Current';
+import EFM from './components/EFM';
 import Process from './components/Process';
 import Reorder from './components/Reorder';
 
@@ -63,6 +70,7 @@ export default {
   name: 'App',
   components: {
     Current,
+    EFM,
     Process,
     Reorder,
   },

@@ -33,11 +33,14 @@
           <v-tab key="Reorder">
             Reorder
           </v-tab>
+          <v-tab key="Three">
+            Three
+          </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-tabs-items v-model="tab">
         <v-tab-item key="Current">
           <Current/>
@@ -48,9 +51,12 @@
         <v-tab-item key="Reorder">
           <Reorder/>
         </v-tab-item>
+        <v-tab-item key="Three">
+          <Three/>
+        </v-tab-item>
       </v-tabs-items>
       <!--<Reorder/>-->
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
@@ -58,6 +64,7 @@
 import Current from './components/Current';
 import Process from './components/Process';
 import Reorder from './components/Reorder';
+import Three from './components/Three';
 
 export default {
   name: 'App',
@@ -65,6 +72,7 @@ export default {
     Current,
     Process,
     Reorder,
+    Three,
   },
   data: () => ({
     //

@@ -1,6 +1,7 @@
 # visp.app
 
 ## VISP - Value and flexibility Impact analysis for Sustainable Production
+
 Research Project, 2018 – 2022
 
 VISP has the objective to develop a model-based decision support that allow manufacturers to offer a greater flexibility without comprising production efficiency. At present, no modeling and simulation support exist to support system architects and platform development teams in these trade-offs. Too much resource is consumed to manage increasing diversification that follow from the introduction of radically new technologies resulting in unwanted adjustments and changes in production.
@@ -14,32 +15,39 @@ A public and web-based version of the tool based on the VISP methodology is deve
 More info: Chalmers Research ([SE](https://research.chalmers.se/project/?id=8430), [EN](https://research.chalmers.se/en/project/8430)), Kunskapsförmedlingen ([SE](https://kunskapsformedlingen.se/projekt/visp-varde-och-flexibilitetsinverkansanalys-for-hallbar-produktion/), [EN](https://kunskapsformedlingen.se/en/projects/visp-value-and-flexibility-impact-analysis-for-sustainable-production/)), VINNOVA ([SE](https://www.vinnova.se/p/visp---varde-och-flexibilitetsinverkansanalys-for-hallbar-produktion/), [EN](https://www.vinnova.se/en/p/visp---value-and-flexibility-impact-analysis-for-sustainable-production/))
 
 ## Web app setup
+
 Clone this [repository](https://github.com/sed-group/visp.app) in your machine and follow the instructions below to try the VISP web tool in its current (pre-alpha) development status.
 
 ### Install dependencies
-```
+
+``` bash
 npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
+
+``` bash
 npm run serve
 ```
 
 ### Compiles and minifies for production
-```
+
+``` bash
 npm run build
 ```
 
 ### Run your tests
-```
+
+``` bash
 npm run test
 ```
 
 ### Lints and fixes files
-```
+
+``` bash
 npm run lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).

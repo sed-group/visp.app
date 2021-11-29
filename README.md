@@ -9,7 +9,7 @@ The VISP methodology captured in a tool is designed to support the effective des
 
 Volvo Car Group and Volvo AB represent the OEM’s providing access to cases used to both set requirements for the VISP methodology, and serve as a means to continuously validate the emerging generic modeling capabilities, to TRL level 5. Chalmers build on their platform based development research and recent Value Driven Design methodology.
 
-A public and web-based version of the tool based on the VISP methodology is dveloped, that will be used in seminars with other automotive companies and for student projects. Scientifically, results will be published in high quality peer reviewed scientific fora.
+A public and web-based version of the tool based on the VISP methodology is developed, that will be used in seminars with other automotive companies and for student projects. Scientifically, results will be published in high quality peer reviewed scientific fora.
 
 More info: Chalmers Research ([SE](https://research.chalmers.se/project/?id=8430), [EN](https://research.chalmers.se/en/project/8430)), Kunskapsförmedlingen ([SE](https://kunskapsformedlingen.se/projekt/visp-varde-och-flexibilitetsinverkansanalys-for-hallbar-produktion/), [EN](https://kunskapsformedlingen.se/en/projects/visp-value-and-flexibility-impact-analysis-for-sustainable-production/)), VINNOVA ([SE](https://www.vinnova.se/p/visp---varde-och-flexibilitetsinverkansanalys-for-hallbar-produktion/), [EN](https://www.vinnova.se/en/p/visp---value-and-flexibility-impact-analysis-for-sustainable-production/))
 

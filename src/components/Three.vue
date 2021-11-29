@@ -22,7 +22,7 @@
 
 <script>
 import {VglRenderer, VglScene, VglBoxGeometry, VglSphereGeometry, VglMesh, VglOrthographicCamera} from "vue-gl";
-import { OrbitControls } from "https://threejs.org/examples/jsm/controls/OrbitControls.js";
+//import { OrbitControls } from "https://threejs.org/examples/jsm/controls/OrbitControls.js";
 
 export default {
   name: "three-example",

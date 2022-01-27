@@ -10,7 +10,7 @@
   "dependencies": {
     "apexcharts": "^3.24.0",
     "core-js": "^2.6.11",
-    "three": "^0.135.0",
+    "three": "^0.137.0",
     "vue": "^2.6.10",
     "vue-apexcharts": "^1.5.3",
     "vue-gl": "^1.0.0",

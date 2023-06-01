@@ -3,6 +3,7 @@
 ## VISP - Value and flexibility Impact analysis for Sustainable Production
 
 Research Project, 2018 – 2023
+With the support of [VINNOVA](https://www.vinnova.se/) and [Fordonsstrategisk forskning och Innovation (FFI)](https://www.vinnova.se/m/fordonsstrategisk-forskning-och-innovation/om-ffi2/).
 
 VISP has the objective to develop a model-based decision support that allow manufacturers to offer a greater flexibility without comprising production efficiency. At present, no modeling and simulation support exist to support system architects and platform development teams in these trade-offs. Too much resource is consumed to manage increasing diversification that follow from the introduction of radically new technologies resulting in unwanted adjustments and changes in production.
 
